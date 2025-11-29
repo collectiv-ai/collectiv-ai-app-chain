@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="collectivai_logo_1_unified.png" alt="CollectiVAI Logo" width="220" />
+  <img src="logo.png" alt="CollectiVAI Logo" width="400" />
 </p>
 
 <h1 align="center">CollectiVAI Chain</h1>
