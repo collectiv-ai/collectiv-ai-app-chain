@@ -6,86 +6,69 @@
 <h3 align="center">Democratic AI for Europe – Cosmos App-Chain</h3>
 
 <p align="center">
-  <a href="#deutsch">🇩🇪 Deutsch</a> &nbsp;|&nbsp; <a href="#english">🇬🇧 English</a>
+  🇩🇪 Deutsch &nbsp;|&nbsp; 🇬🇧 English
 </p>
 
 ---
 
-## 🇩🇪 Deutsch {#deutsch}
-
-### Überblick
+## 🇩🇪 Übersicht
 
 **CollectiVAI Chain** ist eine eigene **App-Chain** auf Basis des Cosmos-Ökosystems.  
 Ziel ist eine transparente, überprüfbare Governance-Infrastruktur für demokratische Entscheidungen  
 mit Fokus auf Europa und digitale Bürgerbeteiligung.
 
-Die Chain dient als neutrale, nachvollziehbare Grundlage für:
+**Kernideen:**
 
-- **Abstimmungen und Entscheidungen** (Governance)
-- **Rollen & Identitäten** (z. B. Bürger:innen, Expert:innen, Institutionen)
-- **Parameter-Management** (z. B. Quoren, Abstimmungsfristen, Gebühren)
+- On-Chain-Governance (Vorschläge, Abstimmungen, Parameter-Änderungen)
+- Rollen & Identitäten (z.&nbsp;B. Bürger:innen, Expert:innen, Institutionen)
+- Trennung von:
+  - **Infrastruktur** (Chain, Validatoren, Governance-Logik)
+  - **Clients & Apps** (z.&nbsp;B. die CollectiVAI iOS/macOS App)
 
-Die CollectiVAI iOS/macOS-App (und weitere Clients) fungiert als **Frontend**,  
-während die CollectiVAI Chain die **Infrastruktur- und Governance-Logik** bereitstellt.
+Dieses Repository enthält:
 
----
+- den Chain-Code (`app/`, `x/`)
+- das Binary (`cmd/collectivaid`)
+- Netzwerkkonfigurationen (`networks/`)
+- Dokumentation (`docs/`)
 
-### Ziele
-
-- **Transparente Governance**  
-  Alle relevanten Entscheidungen, Abstimmungen und Parameteränderungen sind on-chain nachvollziehbar.
-
-- **Rollenbasierte Beteiligung**  
-  Unterschiedliche Rollen (Bürger:innen, Expert:innen, Institutionen) können unterschiedliche Rechte und Verantwortlichkeiten erhalten.
-
-- **Offene Infrastruktur**  
-  Die Chain ist als offene Plattform gedacht, auf der mehrere Clients, Tools und Initiativen aufbauen können.
-
-- **Europäischer Fokus**  
-  Ausrichtung auf demokratische Prozesse, Bürgerbeteiligung und Projekte mit EU-Kontext.
+> ⚠️ Aktueller Status: **Frühe Projektstruktur (Pre-Alpha)** –  
+> die eigentliche Cosmos-App-Logik wird Schritt für Schritt ergänzt.
 
 ---
 
-### Kernkonzepte
+## 🇬🇧 Overview
 
-- **App-Chain auf Cosmos-Basis**  
-  Die CollectiVAI Chain wird als eigenständige App-Chain mit dem Cosmos-Ökosystem entwickelt  
-  (Cosmos SDK / kompatible Komponenten, Details folgen).
+**CollectiVAI Chain** is a dedicated **Cosmos-based App-Chain**  
+designed as a transparent governance and voting infrastructure  
+for democratic decision-making with a strong European focus.
 
-- **On-Chain-Governance**  
-  Vorschläge (Proposals), Abstimmungen (Votes) und Parameteränderungen erfolgen transparent und überprüfbar auf der Chain.
+**Core concepts:**
 
-- **Trennung von Infrastruktur und Clients**  
-  - **Chain:** Validatoren, Governance-Logik, Token-Ökonomie  
-  - **Clients:** CollectiVAI App, Web-Oberflächen, weitere Frontends
+- On-chain governance (proposals, votes, parameter changes)
+- Roles & identities (e.g. citizens, experts, institutions)
+- Separation between:
+  - **Infrastructure** (chain, validators, governance logic)
+  - **Clients & apps** (e.g. the CollectiVAI iOS/macOS app)
 
----
+This repository contains:
 
-### Projektstatus
+- the chain code (`app/`, `x/`)
+- the binary (`cmd/collectivaid`)
+- network configuration (`networks/`)
+- documentation (`docs/`)
 
-> **Status:** Frühe Projektphase (Pre-Alpha)  
-> Diese Repository-Version definiert zunächst:
->
-> - die Grundstruktur der App-Chain,
-> - die Modul-Aufteilung,
-> - und die Dokumentationsbasis.
->
-> Die konkrete Implementierung (Cosmos SDK, Module, Netzwerk-Konfiguration) folgt Schritt für Schritt.
+> ⚠️ Current status: **Early project structure (pre-alpha)** –  
+> the actual Cosmos app logic will be added step by step.
 
 ---
 
-### Repository-Struktur (Entwurf)
+## Repository structure (draft)
 
 ```text
-collectivai-chain/
-├─ cmd/
-│  └─ collectivaid/        # Einstiegspunkt für das Chain-Binary
-├─ app/                    # App-Definition (Cosmos-App-Wiring)
-├─ x/
-│  └─ collectivai/         # Eigene Module für Governance / Civic-Logik
-├─ docs/                   # Dokumentation (Overview, Architektur, Roadmap)
-├─ networks/               # Devnet / Testnet-Konfigurationen (Genesis, Peers)
-├─ scripts/                # Hilfsskripte (Build, Run, Wartung)
-├─ go.mod                  # Go-Moduldefinition
-├─ README.md               # Dieses Dokument
-└─ collectivai_logo_1_unified.png  # Projektlogo
+cmd/collectivaid    - main entrypoint for the CollectiVAI chain binary
+app/                - chain application wiring (Cosmos app, modules, config)
+x/collectivai       - custom module(s) for Civic / Governance logic
+docs/               - documentation (overview, architecture, roadmap)
+networks/           - devnet / testnet configurations
+scripts/            - helper scripts (build, run, deploy)
