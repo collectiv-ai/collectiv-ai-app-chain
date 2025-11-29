@@ -5,6 +5,19 @@
 
 ---
 
+## 📁 Scope of this folder
+
+This folder describes the **concept and role of smart contracts** in the CollectiVAI ecosystem.
+
+- `README.md` – high-level rationale (this file)  
+- `01-treasury-funding.md` – Treasury & public-goods funding mechanisms  
+- `02-reputation-layer.md` – Civic reputation & participation layer  
+
+Implementation details (Cosmos modules / CosmWasm contracts) will follow later,  
+once the core chain and governance flows are stable.
+
+---
+
 ## 🇬🇧 Why Smart Contracts in CollectiVAI?
 
 CollectiVAI is not a DeFi platform and not a trading app.  
@@ -31,17 +44,19 @@ and distribute it according to transparent rules decided by governance.
 
 Possible scenarios:
 
-- City / region / university funds digital or civic-tech projects  
-- Budget is split via on-chain votes or quadratic funding  
-- All steps are visible:
+- city / region / university funds digital or civic-tech projects  
+- budget is split via on-chain votes or quadratic funding  
+- all steps are visible:
   - who proposed which project
   - who supported it
   - how the final allocation was calculated
 
 Key properties:
 
-- No leveraged trading, no speculation features  
-- Designed for **grants, pilots and public-interest projects**
+- no leveraged trading, no speculation features  
+- designed for **grants, pilots and public-interest projects**
+
+(Details: see `01-treasury-funding.md`)
 
 ---
 
@@ -49,18 +64,18 @@ Key properties:
 
 Instead of speculative tokens, CollectiVAI can issue **non-transferable reputation**:
 
-- Participation points for:
+- participation points for:
   - voting regularly
   - providing expert feedback
   - moderating discussions
-- Badges for:
+- badges for:
   - long-term engagement
   - topic expertise (e.g. climate, housing, digital rights)
 
 Technical ideas:
 
-- Soulbound tokens / non-transferable scores  
-- Stored in smart contracts, displayed in the CollectiVAI App profile
+- soulbound tokens / non-transferable scores  
+- stored in smart contracts, displayed in the CollectiVAI App profile
 
 Use in governance:
 
@@ -69,6 +84,8 @@ Use in governance:
   - expert tags to comment on specialised proposals
 
 Again: this is about **trust & accountability**, not about trading.
+
+(Details: see `02-reputation-layer.md`)
 
 ---
 
@@ -101,13 +118,13 @@ Smart contracts in CollectiVAI follow these principles:
 The **CollectiVAI App** will later expose these features via dedicated screens:
 
 - Funding / Grants tab (Treasury)  
-- Profile & Reputation tab (Participation points, badges)  
+- Profile & Reputation tab (participation points, badges)  
 
 ---
 
 ## Status
 
-This folder documents the **concept and design** of smart contract components.  
+This folder documents the **concept and design** of smart-contract components.  
 Implementation details (Cosmos modules / CosmWasm contracts) will be added  
 once the core chain and governance flows are stable.
 
@@ -145,7 +162,7 @@ Typische Szenarien:
 
 - Stadt / Region / Hochschule fördert digitale oder Civic-Tech-Projekte  
 - Budget wird über On-Chain-Abstimmungen oder Quadratic Funding verteilt  
-- Alle Schritte sind sichtbar:
+- alle Schritte sind sichtbar:
   - wer welches Projekt vorgeschlagen hat
   - wer es unterstützt hat
   - wie die finale Verteilung berechnet wurde
