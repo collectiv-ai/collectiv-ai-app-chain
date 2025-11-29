@@ -1,0 +1,14 @@
+# Go build artifacts
+/build
+/bin
+*.exe
+*.dll
+*.so
+
+# Vendor (if ever used)
+vendor/
+
+# Editor / IDE
+.vscode/
+.idea/
+.DS_Store
